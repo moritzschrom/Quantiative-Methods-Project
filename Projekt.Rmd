@@ -1,0 +1,114 @@
+---
+title: "Template für Forschungsberichte"
+author: "Marcus Wurzer"
+date: "9\\. September 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Aufgabe 1 (2019-09-25)
+
+## Neu: Formulierung der Forschungsfrage
+
+## Neu: Beschreibung des Forschungshintergrunds
+
+
+
+\newpage
+
+# Aufgabe 2 (2019-10-15)
+
+## Formulierung der Forschungsfrage
+
+## Beschreibung des Forschungshintergrunds
+
+## Neu: Formulierung der Forschungshypothese
+
+### Art der Forschungshypothese (korrelativ/kausal)
+
+### abhängige und unabhängige Variable (wenn sinnvoll)
+
+### Beeinflussbarkeit der unabhängigen Variable
+
+### Mögliche Störvariablen
+
+
+
+\newpage
+
+# Aufgabe 3 (2019-11-05)
+
+## Formulierung der Forschungsfrage
+
+## Beschreibung des Forschungshintergrunds
+
+## Formulierung der Forschungshypothese
+
+### Art der Forschungshypothese (korrelativ/kausal)
+
+### abhängige und unabhängige Variable (wenn sinnvoll)
+
+### Beeinflussbarkeit der unabhängigen Variable
+
+### Mögliche Störvariablen
+
+## Neu: Forschungsdesign
+
+### Erhebungsform
+
+### Definition der Beobachtungseinheiten
+
+### Definition der Population/Grundgesamtheit
+
+### Stichprobenbenziehung
+
+### Repräsentativität
+
+
+
+\newpage
+
+# Aufgabe 4 (2019-11-26)
+
+## Formulierung der Forschungsfrage
+
+## Beschreibung des Forschungshintergrunds
+
+## Formulierung der Forschungshypothese
+
+### Art der Forschungshypothese (korrelativ/kausal)
+
+### abhängige und unabhängige Variable (wenn sinnvoll)
+
+### Beeinflussbarkeit der unabhängigen Variable
+
+### Mögliche Störvariablen
+
+## Forschungsdesign
+
+### Erhebungsform
+
+### Definition der Beobachtungseinheiten
+
+### Definition der Population/Grundgesamtheit
+
+### Stichprobenbenziehung
+
+### Repräsentativität
+
+## Neu: Operationalisierung
+
+### Skalenniveau der interessierenden Variablen (inklusive Störvariable)
+
+### Mögliche Ausprägungen (Kategorien bzw. Wertebereich)
+
+### Für metrische Variablen: Präzision der Messungen
+
+## Neu: Statistische Methoden
+
+### Verwendete Methode (ohne Berücksichtigung der Störvariable)
+
+### Verwendete Methode (bei Berücksichtigung der Störvariable)

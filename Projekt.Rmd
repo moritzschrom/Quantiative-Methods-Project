@@ -1,7 +1,7 @@
 ---
-title: "Template für Forschungsberichte"
-author: "Marcus Wurzer"
-date: "9\\. September 2019"
+title: "Bericht (für Fachkolleg:innen)"
+author: "Moritz Laßnig, Moritz Schrom, Claudia Vötter"
+date: "4\\. Dezember 2022"
 output: pdf_document
 ---
 
@@ -9,25 +9,64 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Aufgabe 1 (2019-09-25)
+# Ausgangssituation
 
-## Neu: Formulierung der Forschungsfrage
+Die Tierkreiszeichen (im Allgemeinen vereinfacht Sternzeichen genannt) beschreiben zwölf gleich große Abschnitte im Tierkreis, einer 20 Grad breiten Zone um die Ekliptik (scheinbare Sonnenbahn). Sie werden noch heute häufig in der Astrologie für z.B. Horoskope verwendet, und spalten damit die Meinungen ob durch sie valide Prognosen gestellt werden können. In dieser Kontroverse gründet die Motivation unserer Forschung, um dem oft sehr emotional geführten Diskurs ein empirisch untermauertes Argument hinzuzufügen.
 
-## Neu: Beschreibung des Forschungshintergrunds
+**Forschungsfrage**: Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?
+
+**Forschungshypothese**: In vergleichbaren Gruppen von Menschen mit demselben Sternzeichen wird eine Gruppe eine stärkere oder schwächere Ausprägung einer Charaktereigenschaft aufweisen.
+
+**Nullhypothese**: Es gibt keine signifikanten Unterschide in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Sternzeichen und Charaktereigenschaften sind unabhängig.
+
+**Alternativhypothese**: Es gibt signifkante Unterschiede in beobachteten Charaktereigenschaft zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Zumindest eine Charaktereigenschaft ist bei zumindest einer Gruppe besonders stark oder schwach ausgeprägt. Sternzeichen und Charaktereigenschaft sind abhängig.
+
+Es handelt sich hierbei um eine vorhersagende Forschungsfrage, da untersucht wird was passiwert, wenn sich eine Variable (Sternzeichen) ändert. Es wird die Beeinflusssung dieser Variable auf die zweite Variable (Charaktereigenschaft) untersucht. Dazu werden Daten erhoben, mit welcher die Hypothese getestet wird.
+
+Desweiteren handelt es sich um eine korrelative Forschungshypothese, da nur ein möglicher Zusammenhang zwischen den Variablen (welcher zum Beispiel in Form eines Modelles für Prognosen verwendet werden könnte) wird. Unsere Forschungshypothese zielt nicht darauf ab einen kausalen Zusammenhang zwischen dem Sternzeichen und Charaktereigenschaft zu be- oder wiederlegen.
+
+# Beschreibung des Datensatzes ("Datensteckbrief")
+
+* Stichprobenumfang
+* Merkmale (samt Skalenniveau)
+* Gibt es fehlende Werte? Wir wurden diese behandelt?
+
+# Ziel der Analyse (Kurz, nicht ganze Angabe abschreiben)
+
+# Deskriptive Analyse der Stichprobe
+
+* Diagramm(e) samt Beschreibungen: Gibt es Auffälligkeiten?
+* Tabellen, Kennzahlen ... samt verbaler Beurteilung
+* Ableitung allfälliger Hypothesen
+
+# Überprüfung der Fragestellung bzgl. der Grundgesamtheit (Tests, Konfidenzintervalle, Modelle etc.)
+
+* Bei Tests:
+  * Angabe von Testbezeichnung
+  * Begründung der Testauswahl (z.B. robuste Methoden bei Ausreißern etc.)
+  * Null- und Alternativhypothese
+  * Signifkanzniveau
+  * P-Wert
+  * Formale Schlussfolgerung (Vergleich P-Wert mit Signifikanzniveau)
+  * Inhaltliche Schlussfolgerung
+* Bei Modellen:
+  * Begründung für die Wahl des Modells (z.B. abhängig vom Skalenniveau der abhängigen und unabhängigen Variablen)
+  * Schätzung des Modells
+  * Bei Regressionsmodellen: Ableitung der Modellformel, sowie Interpretation des Einflusses der unabhängigen Variablen auf die abhängige Variable ("Effektstärke"). Unterstützung via Effektplot bzw. Modellplot
+  * Beurteilung der Signifikanz der Parameter, sowie des Gesamtmodells
+  * Beurteilung der Modellgüte (z.B. R<sup>2</sup> bei linearer Regression)
+  * Modelldiagnostik (Normalverteilung der Residuen, Restzusammenhang der Residuen mit den geschätzen Werten)
+  * Diagramm mit erwarteten Werten (z.B. Regressionsgerade) samt Konfidenzbändern
+  * Vorhersagen (erwartete Werte, bzw. Prognoseintervalle für Einzelwerte)
+
+# Fazit
+
+* Zusammenfassung
+* Diskussion allfälliger Probleme
+* Generalisierbarkeit der Ergebnisse
 
 
-
-\newpage
-
-# Aufgabe 2 (2019-10-15)
-
-## Formulierung der Forschungsfrage
-
-## Beschreibung des Forschungshintergrunds
-
-## Neu: Formulierung der Forschungshypothese
-
-### Art der Forschungshypothese (korrelativ/kausal)
+# Aufgabe 2
 
 ### abhängige und unabhängige Variable (wenn sinnvoll)
 
@@ -35,11 +74,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Mögliche Störvariablen
 
-
-
 \newpage
 
-# Aufgabe 3 (2019-11-05)
+# Aufgabe 3
 
 ## Formulierung der Forschungsfrage
 
@@ -67,11 +104,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Repräsentativität
 
-
-
 \newpage
 
-# Aufgabe 4 (2019-11-26)
+# Aufgabe 4
 
 ## Formulierung der Forschungsfrage
 

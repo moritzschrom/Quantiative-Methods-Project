@@ -21,9 +21,11 @@ Die Tierkreiszeichen (im Allgemeinen vereinfacht Sternzeichen genannt) beschreib
 
 **Alternativhypothese**: Es gibt signifkante Unterschiede in beobachteten Charaktereigenschaft zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Zumindest eine Charaktereigenschaft ist bei zumindest einer Gruppe besonders stark oder schwach ausgeprägt. Sternzeichen und Charaktereigenschaft sind abhängig.
 
-Es handelt sich hierbei um eine vorhersagende Forschungsfrage, da untersucht wird was passiwert, wenn sich eine Variable (Sternzeichen) ändert. Es wird die Beeinflusssung dieser Variable auf die zweite Variable (Charaktereigenschaft) untersucht. Dazu werden Daten erhoben, mit welcher die Hypothese getestet wird.
+Es handelt sich hierbei um eine *vorhersagende Forschungsfrage*, da untersucht wird was passiwert, wenn sich eine Variable (Sternzeichen) ändert. Es wird die Beeinflusssung dieser Variable auf die zweite Variable (Charaktereigenschaft) untersucht. Dazu werden Daten erhoben, mit welcher die Hypothese getestet wird.
 
-Desweiteren handelt es sich um eine korrelative Forschungshypothese, da nur ein möglicher Zusammenhang zwischen den Variablen (welcher zum Beispiel in Form eines Modelles für Prognosen verwendet werden könnte) wird. Unsere Forschungshypothese zielt nicht darauf ab einen kausalen Zusammenhang zwischen dem Sternzeichen und Charaktereigenschaft zu be- oder wiederlegen.
+Desweiteren handelt es sich um eine *korrelative Forschungshypothese*, da nur ein möglicher Zusammenhang zwischen den Variablen (welcher zum Beispiel in Form eines Modelles für Prognosen verwendet werden könnte) wird. Unsere Forschungshypothese zielt nicht darauf ab einen kausalen Zusammenhang zwischen dem Sternzeichen und Charaktereigenschaft zu be- oder wiederlegen.
+
+Für die Charaktereigenschaften einer Person gibt es viele potentielle Störfaktoren. Zum Beispiel die Sozialisation der Person, welche eine Anpassung an gesellschaftliche Denk- und Gefühlsmuster durch Verinnerlichung von sozialen Normen beschreibt. Wichtige Beiträge für die Erforschung der Entwicklung von Persönlichkeitsmerkmalen in der frühen Kindheit, Jugend bis hin zum mittleren und höheren Lebensalter (daher über die gesamte Lebensspanne) kommen vor allem aus Humangenetik, Entwicklungsbiologie, Ethnologie und Kulturanthropologie, sowie aus sonstigen Arbeitsrichtungen der Psychologie. Für unsere konkrete Forschungshypothese hat dies jedoch keinen direkten Einfluss, da davon auszugehen ist, dass sich Störfaktoren auf die Gesamtheit auswirken, und nicht nur auf eine Gruppe mit einem Sternzeichen. Auf mögliche Störfaktoren, welche erwartete Verteilungen der Ausprägungen beeinflussen, wird in der deskriptiven Analyse genauer eingegangen.
 
 # Beschreibung des Datensatzes ("Datensteckbrief")
 
@@ -64,15 +66,6 @@ Desweiteren handelt es sich um eine korrelative Forschungshypothese, da nur ein 
 * Zusammenfassung
 * Diskussion allfälliger Probleme
 * Generalisierbarkeit der Ergebnisse
-
-
-# Aufgabe 2
-
-### abhängige und unabhängige Variable (wenn sinnvoll)
-
-### Beeinflussbarkeit der unabhängigen Variable
-
-### Mögliche Störvariablen
 
 \newpage
 

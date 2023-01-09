@@ -76,7 +76,12 @@ Zwar wird von keinen signifikanten Unterschieden vom Einfluss (oder Nicht-Einflu
 * \textcolor{red}{Erfassungsdatum (Tag, Monat und Jahr, z.B. 09.01.2023)}
 
 ## Statistische Methoden
+\textcolor{red}{* Kovarianzanalyse:
+Ziel ist, die Auswirkung von Kovariaten bzw. Kovariablen, d. h. von nicht interessierenden unabhängigen Variablen, auf die abhängige Variable auszublenden (Reduktion des Rauschens) und so einen möglichen Effekt einer interessierenden unabhängigen Variable auf die abhängige Variable statistisch nachweisen zu können (Erhöhung der Trennschärfe)}
 
+\textcolor{red}{* Mehr als zwei kategorielle Variablen:
+Wir untersuchen zunächst den Einfluss des kategorialen Merkmals Tierkzreiszeichen auf die kategoriellen Merkmale der Charaktereigenschaften. Hierbei wird jede Charaktereigenschaft sowohl einzeln als auch alle Charaktereigenschaften gesammelt analysiert.
+Hierbei wird das Homogenitätsproblem untersucht, da ein kausaler Zusammenhang überprüft wird( Einfluss Sternzeichen auf Charaktereigenschaften)}
 
 
 # Beschreibung des Datensatzes ("Datensteckbrief")

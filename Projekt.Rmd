@@ -9,7 +9,13 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Ausgangssituation
+# Kurzfassung
+
+TODO:
+
+# Einleitung
+
+## Ausgangssituation
 
 Die Tierkreiszeichen (im Allgemeinen vereinfacht Sternzeichen genannt) beschreiben zwölf gleich große Abschnitte im Tierkreis, einer 20 Grad breiten Zone um die Ekliptik (scheinbare Sonnenbahn). Sie werden noch heute häufig in der Astrologie für z.B. Horoskope verwendet, und spalten damit die Meinungen, ob durch sie valide Prognosen gestellt werden können. In dieser Kontroverse gründet die Motivation unserer Forschung, um dem oft sehr emotional geführten Diskurs ein empirisch untermauertes Argument hinzuzufügen.
 
@@ -77,21 +83,160 @@ Zwar wird von keinen signifikanten Unterschieden vom Einfluss (oder Nicht-Einflu
 
 ## Statistische Methoden
 
+TODO
 
+# Datenmanagement
 
-# Beschreibung des Datensatzes ("Datensteckbrief")
+Zur Untersuchung gelangt eine Stichprobe mit TODO Beobachtungen und fünf Merkmalen:
 
-* Stichprobenumfang
-* Merkmale (samt Skalenniveau)
-* Gibt es fehlende Werte? Wir wurden diese behandelt?
+* Geburtsdatum, Tag und Monat im Format TT.MM. (*geburtstag*)
+* Charaktereigenschaft 1, binäre kategoriale Variable mit den Ausprägungen: Extraversion / Introversion (*extraversion_introversion*)
+* Charaktereigenschaft 2, binäre kategoriale Variable mit den Ausprägungen: Intuition / Sensorik (*intuition_sensorik*)
+* Charaktereigenschaft 3, binäre kategoriale Variable mit den Ausprägungen: Denken / Fühlen (*denken_fuehlen*)
+* Charaktereigenschaft 4, binäre kategoriale Variable mit den Ausprägungen: Wahrnehmen / Beurteilen (*wahrnehmen_beurteilen*)
 
-# Ziel der Analyse (Kurz, nicht ganze Angabe abschreiben)
+Die Daten wurden in einer geteilten Datenbank gesammelt, liegen in einer exportierten CSV-Datei vor, und werden mit `read.table()` eingelesen:
+
+```{r}
+daten = read.table("daten.csv", header = TRUE, sep=",")
+head(daten)
+```
+
+Vorerst wird überprüft, ob es fehlende Werte gibt:
+
+```{r}
+any(is.na(daten))
+summary(daten)
+```
+
+Es gibt keine fehlenden Werte. Jedoch fällt beim `summary()` der Daten auf, dass einige der vorliegenden Variablen noch nicht den gewünschten Datentyp entsprechen. So sollte *geburtstag* ein `Date` (statt `character`) sein, sowie die 4 Charaktereigenschaften als Faktor vorliegen. Dazu müssen wir die eingelesenen Daten umwandeln.
+
+Zuerst werden die Charaktereigenschaften mit `as.factor()` in einen Faktor umgewandelt:
+
+```{r}
+daten$extraversion_introversion<-as.factor(daten$extraversion_introversion)
+daten$intuition_sensorik<-as.factor(daten$intuition_sensorik)
+daten$denken_fuehlen<-as.factor(daten$denken_fuehlen)
+daten$wahrnehmen_beurteilen<-as.factor(daten$wahrnehmen_beurteilen)
+summary(daten)
+
+```
+
+Aus technischen Gründen liegen Metadaten vor, welche nicht benötigt werden (z.B. `erstellt_von`). Diese werden im nächsten Schritt entfernt:
+
+```{r}
+daten<-daten[,-c(7,8)]
+summary(daten)
+```
+
+Die Variable *geburtstag* liegt im Format TT.MM. vor und muss in ein `Date` umgewandelt werden.
+
+```{r}
+daten$geburtstag<-as.Date(daten$geburtstag, format='%d.%m.')
+summary(daten)
+```
+
+Da das Jahr für die Ermittlung des Sternzeichens keine Relevanz hat, ist die Annahme des aktuellen Jahres (2023) von R für uns in Ordnung.
+Mit Hilfe der `Zodiac()` Funktion aus dem `DescTools` Paket wird der Datumswert in das Sternzeichen (in Form einer Zeichenkette) umgewandelt.
+
+```{r}
+# install.packages("DescTools")
+library(DescTools)
+daten$sternzeichen<-Zodiac(daten$geburtstag, lang="deu")
+summary(daten)
+```
 
 # Deskriptive Analyse der Stichprobe
 
-* Diagramm(e) samt Beschreibungen: Gibt es Auffälligkeiten?
-* Tabellen, Kennzahlen ... samt verbaler Beurteilung
-* Ableitung allfälliger Hypothesen
+Die Verteilung der Sternzeichen wird als Barplot visualisiert:
+
+```{r}
+sternzeichen<-daten$sternzeichen
+barplot(table(sternzeichen), las=2)
+abline(h=mean(length(sternzeichen)/12), col="red")
+```
+
+Es ist erkennbar, dass die Sternzeichen in der Stichprobe nicht gleich oft vorkommen. 
+#TODO: So kommt das Sternzeichen ... mit einer Population von ... am häufigsten vor, das Sternzeichen ... mit einer Population von ... am seltensten (auf die Stichprobe bezogen).
+
+Die Verteilung der vier erfassten Charaktereigenschaften werden auch als Barplots visualisiert:
+
+```{r}
+c1<-daten$extraversion_introversion
+c2<-daten$intuition_sensorik
+c3<-daten$denken_fuehlen
+c4<-daten$wahrnehmen_beurteilen
+par(mfrow=c(2,2))
+
+barplot(table(c1))
+abline(h=mean(length(c1)/2), col="red")
+barplot(table(c2))
+abline(h=mean(length(c2)/2), col="red")
+barplot(table(c3))
+abline(h=mean(length(c3)/2), col="red")
+barplot(table(c4))
+abline(h=mean(length(c4)/2), col="red")
+```
+
+Manche der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteilen/Wahrnehmen) kommen in der Stichprobe in etwa gleich häufig vor. Einzig die Charaktereigenschaft Extraversion/Introversion scheint etwas ungleich verteilt.
+
+# Untersuchung des Zusammenhangs Sternzeichen und Charaktereigenschaften
+
+Es handelt sich um fünf Merkmale, die pro Respondent:in erhoben wurden. `Sternzeichen` stellt ein Gruppierungsmekrmal dar, es handelt sich daher bei der Fragestellung, ob Charaktereigenschaften bei unterschiedlichen Sternzeichen gleich verteilt sind um ein *Homogenitätsproblem*.
+
+Zunächst kombinieren wir die einzelnen Kontingenztabellen zu einer gemeinsamen Tabelle, welche die Sternzeichen und die Summe aller Charaktereigenschaften (jeweils 4 binäre kategoriale Variablen) enthält:
+
+```{r}
+t1 = with(daten, table(sternzeichen, extraversion_introversion))
+t2 = with(daten, table(sternzeichen, intuition_sensorik))
+t3 = with(daten, table(sternzeichen, denken_fuehlen))
+t4 = with(daten, table(sternzeichen, wahrnehmen_beurteilen))
+
+tab_sternzeichen_charaktereigenschaft = cbind(t1, t2, t3, t4)
+library(pander)
+pander(tab_sternzeichen_charaktereigenschaft, justify="right", emphasize.rownames=FALSE)
+```
+
+Die relativen Anteile werden in Zeilenprozent, also normiet auf die Sternzeichen, angegeben:
+
+```{r}
+tab_sternz_rel = round(prop.table(tab_sternzeichen_charaktereigenschaft, 1), 2)
+pander(tab_sternz_rel, justify="right", emphasize.rownames=FALSE)
+```
+
+Es ist zu erkennen, dass Charaktereigenschaften in der Stichprobe bei unterschidlichen Sternzeichen unterschiedlich häufig auftreten. So gibt es in der Stichprobe kaum Personen mit Sternzeichen Löwe und Charaktereigenschaft Introversion, jedoch viele Personen mit Sternzeichen Stier und Charaktereigenschaft Introversion.
+
+Die relativen Häufigkeiten werden mit Hilfe eines Spineplots visualisiert:
+
+
+```{r}
+spineplot(tab_sternz_rel, main="Charaktereigenschaft nach Sternzeichen")
+```
+
+Auch der Spineplot zeigt, dass die Verteilungen der jeweiligen Charaktereigenschaften bei unterschiedlichen Sternzeichen etwas abweichen. Es gilt nun zu überprüfen, ob diese in der Stichprobe beobachteten Unterschiede auch auf die Grundgesamtheit zutreffen. Dazu wird ein $\chi^2$-Test mit Signifikanzniveau 0.05 durchgeführt (Nullhypothese: Verteilung der Charaktereigenschaften homogen in den Sternzeichen; Alternative: nicht homogen):
+
+```{r}
+chisq.test(tab_sternzeichen_charaktereigenschaft)
+```
+
+Aufgrund der Wanrmeldung kontrollieren wir mit simuliertem P-Werten:
+
+```{r}
+chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000)
+```
+
+Der P-Wert liegt in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen. werden.
+
+```{r}
+# TODO: Durch 4 
+# tab_extraversion_introversion_sternzeichen = with(daten, table(extraversion_introversion, sternzeichen))
+# tab_extraversion_introversion_sternzeichen
+# library(vcd)
+# tile(tab_extraversion_introversion_sternzeichen, main="Beobachtete Werte")
+# tile(tab_extraversion_introversion_sternzeichen, type="expected", main="Erwartete Werte")
+# chisq.test(tab_extraversion_introversion_sternzeichen)
+```
+
 
 # Überprüfung der Fragestellung bzgl. der Grundgesamtheit (Tests, Konfidenzintervalle, Modelle etc.)
 
@@ -121,74 +266,3 @@ Zwar wird von keinen signifikanten Unterschieden vom Einfluss (oder Nicht-Einflu
 
 \newpage
 
-# Aufgabe 3
-
-## Formulierung der Forschungsfrage
-
-## Beschreibung des Forschungshintergrunds
-
-## Formulierung der Forschungshypothese
-
-### Art der Forschungshypothese (korrelativ/kausal)
-
-### abhängige und unabhängige Variable (wenn sinnvoll)
-
-### Beeinflussbarkeit der unabhängigen Variable
-
-### Mögliche Störvariablen
-
-## Neu: Forschungsdesign
-
-### Erhebungsform
-
-### Definition der Beobachtungseinheiten
-
-### Definition der Population/Grundgesamtheit
-
-### Stichprobenbeziehung
-
-### Repräsentativität
-
-\newpage
-
-# Aufgabe 4
-
-## Formulierung der Forschungsfrage
-
-## Beschreibung des Forschungshintergrunds
-
-## Formulierung der Forschungshypothese
-
-### Art der Forschungshypothese (korrelativ/kausal)
-
-### abhängige und unabhängige Variable (wenn sinnvoll)
-
-### Beeinflussbarkeit der unabhängigen Variable
-
-### Mögliche Störvariablen
-
-## Forschungsdesign
-
-### Erhebungsform
-
-### Definition der Beobachtungseinheiten
-
-### Definition der Population/Grundgesamtheit
-
-### Stichprobenbeziehung
-
-### Repräsentativität
-
-## Neu: Operationalisierung
-
-### Skalenniveau der interessierenden Variablen (inklusive Störvariable)
-
-### Mögliche Ausprägungen (Kategorien bzw. Wertebereich)
-
-### Für metrische Variablen: Präzision der Messungen
-
-## Neu: Statistische Methoden
-
-### Verwendete Methode (ohne Berücksichtigung der Störvariable)
-
-### Verwendete Methode (bei Berücksichtigung der Störvariable)

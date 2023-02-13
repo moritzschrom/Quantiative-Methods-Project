@@ -35,59 +35,59 @@ Für die Charaktereigenschaften einer Person gibt es viele potenzielle Störfakt
 Ein weiterer Störfaktor ist die Person, welche die Daten erhebt. Um dies zu erläutern, wird im folgenden kurz auf die Methode der Datenerhebung und das Forschungsdesign im Allgemeinen eingegangen.
 
 ## Forschungsdesign
-Für die Beantwortung der Forschungsfrage wurden Daten von den Autor:innen gesammelt. Um Unschärfen in der Selbsteinschätzung zu verhindern, bewerteten die Autor:innen Personen aus dem Umfeld nach den Myers-Briggs Typenindikatoren. Es handelt sich dabei um vier binären Kategorien, welche unterschiedliche Charaktereigenschaften von Menschen kategorisieren. Zusätzlich wurde der Geburtstag (Tag und Monat) erfasst. Die Erfassung wurde in einer für alle Autor:innen zugänglichen geschützten Datenbank durchgeführt. Da es sich hierbei am Ende des Tages um eine subjektive Einschätzung handelt, ist die einschätzende Person ein potenzieller Störfaktor. Um diesen Störfaktor auszugleichen, wurde von allen Autor:innen gleichermaßen zum Datensatz beigetragen. Dies gleicht auch Unterschiede im Umfeld der erhebenden Personen aus. Eine weitere Fehlerquelle sind Doppelerfassungen im Datensatz. Da sich der Bekanntenkreis der Autor:innen sich kaum überlappt, und aktiv darauf geachtet wurde keine Duplikate zu erfassen, stellt dies nach Meinung der Autor:innen jedoch kein Problem dar.
+Für die Beantwortung der Forschungsfrage wurden Daten von den drei Autor:innen gesammelt. Um Unschärfen in der Selbsteinschätzung zu verhindern, bewerteten die Autor:innen Personen aus dem Umfeld nach den Myers-Briggs Typenindikatoren. Es handelt sich dabei um vier binären Kategorien, welche unterschiedliche Charaktereigenschaften von Menschen kategorisieren. Zusätzlich wurde der Geburtstag (Tag und Monat) erfasst. Die Erfassung wurde in einer für alle Autor:innen zugänglichen geschützten Datenbank durchgeführt. Da es sich hierbei am Ende des Tages um eine subjektive Einschätzung handelt, ist die einschätzende Person ein potenzieller Störfaktor. Um diesen Störfaktor auszugleichen, wurde von allen Autor:innen gleichermaßen zum Datensatz beigetragen. Dies gleicht auch Unterschiede im Umfeld der erhebenden Personen aus. Eine weitere Fehlerquelle sind Doppelerfassungen im Datensatz. Da sich der Bekanntenkreis der Autor:innen sich kaum überlappt, und aktiv darauf geachtet wurde keine Duplikate zu erfassen, stellt dies nach Meinung der Autor:innen jedoch kein Problem dar.
 
 Zwar wird von keinen signifikanten Unterschieden vom Einfluss (oder Nicht-Einfluss) von Sternzeichen auf Charaktereigenschaft in unterschiedlichen Altersgruppen und sozialen Kreisen ausgegangen, jedoch ist dies zum aktuellen Stand nicht empirisch belegt. Daher können wir nur von einer Grundpopulation ausgehen, für welche die Stichprobe repräsentativ ist. Es handelt sich bei den erfassten Personen um größtenteils österreichische Student:innen oder Akademiker:innen im Alter von 20-35 Jahren. Um schnelle und falsche Schlüsse auf eine zu große Grundgesamtheit bei unserem Stichprobenumfang zu vermeiden, bezieht sich die Grundpopulation auf genau ebendiesen beschriebenen Personenkreis.
 
 ## Operationalisierung
 
-\textcolor{red}{Wie bereits allgemein beschrieben, werden Informationen zum Sternzeichen und zu den Charaktereigenschaften von Personen nach dem Myers-Briggs Typenindikator mit Hilfe einer geteilten Datenbank gesammelt. Im konkreten bedeutet dies, dass primär folgende Variablen mit den genannten Ausprägungsformen erfasst werden:}
+Wie bereits allgemein beschrieben, werden Informationen zum Sternzeichen und zu den Charaktereigenschaften von Personen nach dem Myers-Briggs Typenindikator mit Hilfe einer geteilten Datenbank gesammelt. Im konkreten bedeutet dies, dass primär folgende Variablen mit den genannten Ausprägungsformen erfasst werden:
 
-* \textcolor{red}{Geburtsdatum (Tag und Monat, z.B. 04.11.)}
-* \textcolor{red}{Charaktereigenschaften:}
-  * \textcolor{red}{Extraversion / Introversion}
-  * \textcolor{red}{Intuition / Sensorik}
-  * \textcolor{red}{Denken / Fühlen}
-  * \textcolor{red}{Wahrnehmen / Beurteilen}
+* Geburtsdatum (Tag und Monat, z.B. 04.11.)
+* Charaktereigenschaften:
+  * Extraversion / Introversion
+  * Intuition / Sensorik
+  * Denken / Fühlen
+  * Wahrnehmen / Beurteilen
 
-\textcolor{red}{Es handelt sich bei den vier Merkmalen welche die Charaktereigenschaften von Personen beschreiben jeweils um kategoriale Variablen mit binärer Ausprägung: Jede der vier Kategorien wird in zwei mögliche Ausprägungen unterteilt. So kann die Variable "Extraversion / Introversion" entweder den Wert "Extraversion" oder "Introversion" annehmen, jedoch nie beide oder keinen der beiden möglichen Werte. Dies kann im Folgenden auch kodiert werden:}
+Es handelt sich bei den vier Merkmalen, welche die Charaktereigenschaften von Personen beschreiben jeweils um kategoriale Variablen mit binärer Ausprägung: Jede der vier Kategorien wird in zwei mögliche Ausprägungen unterteilt. So kann die Variable "Extraversion / Introversion" entweder den Wert "Extraversion" oder "Introversion" annehmen, jedoch nie beide oder keinen der beiden möglichen Werte. Dies kann im Folgenden auch kodiert werden:
 
-* \textcolor{red}{Charaktereigenschaft1: Extraversion (0) ... Introversion (1)}
-* \textcolor{red}{Charaktereigenschaft2: Intuition (0) ... Sensorik (1)}
-* \textcolor{red}{Charaktereigenschaft3: Denken (0) ... Fühlen (1)}
-* \textcolor{red}{Charaktereigenschaft4: Wahrnehmen (0) ... Beurteilen (1)}
+* Charaktereigenschaft1: Extraversion (0) ... Introversion (1)
+* Charaktereigenschaft2: Intuition (0) ... Sensorik (1)
+* Charaktereigenschaft3: Denken (0) ... Fühlen (1)
+* Charaktereigenschaft4: Wahrnehmen (0) ... Beurteilen (1)
 
-\textcolor{red}{In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.}
+In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.
 
-\textcolor{red}{Beim Geburtsdatum handelt es sich um ein verpflichtendes Datumsfeld, welches den Wertebereich auf gültige Tages und Monatswerte festlegt. Im folgenden wird aus dem Geburtsdatum das Tierkreiszeichen abgeileitet. Da das Geburtsjahr für die Bestimmung des Tierkreiszeichens nicht notwendig ist, wird dieses nicht erfasst.}
+Beim Geburtsdatum handelt es sich um ein verpflichtendes Datumsfeld, welches den Wertebereich auf gültige Tages und Monatswerte festlegt. Im Folgenden wird aus dem Geburtsdatum das Tierkreiszeichen abgeleitet. Da das Geburtsjahr für die Bestimmung des Tierkreiszeichens nicht notwendig ist, wird dieses nicht erfasst.
 
-\textcolor{red}{Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf möglichen Ausprägungen:}
+Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf möglichen Ausprägungen:
 
-* \textcolor{red}{Widder (21.03. - 20.04.)}
-* \textcolor{red}{Stier (21.04. - 21.05.)}
-* \textcolor{red}{Zwillinge (22.05. - 21.06.)}
-* \textcolor{red}{Krebs (22.06. - 22.07.)}
-* \textcolor{red}{Löwe (23.07. - 22.08.)}
-* \textcolor{red}{Jungfrau (23.08. - 22.09.)}
-* \textcolor{red}{Waage (23.09. - 22.10.)}
-* \textcolor{red}{Skorpion (23.10. - 22.11.)}
-* \textcolor{red}{Schütze (23.11. - 20.12.)}
-* \textcolor{red}{Steinbock (21.12. - 19.01.)}
-* \textcolor{red}{Wassermann (20.01. - 18.02.)}
-* \textcolor{red}{Fische (19.02. - 20.03.)}
+* Widder (21.03. - 20.04.)
+* Stier (21.04. - 21.05.)
+* Zwillinge (22.05. - 21.06.)
+* Krebs (22.06. - 22.07.)
+* Löwe (23.07. - 22.08.)
+* Jungfrau (23.08. - 22.09.)
+* Waage (23.09. - 22.10.)
+* Skorpion (23.10. - 22.11.)
+* Schütze (23.11. - 20.12.)
+* Steinbock (21.12. - 19.01.)
+* Wassermann (20.01. - 18.02.)
+* Fische (19.02. - 20.03.)
 
-\textcolor{red}{Um den Datensatz auch hinsichtlich möglichen Störvariablen zu untersuchen, werden außerdem folgende Metadaten erfasst:}
+Um den Datensatz auch hinsichtlich möglichen Störvariablen zu untersuchen, werden außerdem folgende Metadaten erfasst:
 
-* \textcolor{red}{Erfassende Person (Freitextfeld welcher mit dem Namen der erfassenden Person befüllt wird, in unserem Fall der Vor- und Nachname einer der drei Autor:innen)}
-* \textcolor{red}{Erfassungsdatum (Tag, Monat und Jahr, z.B. 09.01.2023)}
+* Erfassende Person (Freitextfeld welcher mit dem Namen der erfassenden Person befüllt wird, in unserem Fall der Vor- und Nachname einer der drei Autor:innen)
+* Erfassungsdatum (Tag, Monat und Jahr, z.B. 09.01.2023)
 
 ## Statistische Methoden
-\textcolor{red}{* Kovarianzanalyse:
-Ziel ist, die Auswirkung von Kovariaten bzw. Kovariablen, d. h. von nicht interessierenden unabhängigen Variablen, auf die abhängige Variable auszublenden (Reduktion des Rauschens) und so einen möglichen Effekt einer interessierenden unabhängigen Variable auf die abhängige Variable statistisch nachweisen zu können (Erhöhung der Trennschärfe)}
+* Kovarianzanalyse:
+Ziel ist, die Auswirkung von Kovariaten bzw. Kovariablen, d. h. von nicht interessierenden unabhängigen Variablen, auf die abhängige Variable auszublenden (Reduktion des Rauschens) und so einen möglichen Effekt einer interessierenden unabhängigen Variable auf die abhängige Variable statistisch nachweisen zu können (Erhöhung der Trennschärfe)
 
-\textcolor{red}{* Mehr als zwei kategorielle Variablen:
+* Mehr als zwei kategorielle Variablen:
 Wir untersuchen zunächst den Einfluss des kategorialen Merkmals Tierkzreiszeichen auf die kategoriellen Merkmale der Charaktereigenschaften. Hierbei wird jede Charaktereigenschaft sowohl einzeln als auch alle Charaktereigenschaften gesammelt analysiert.
-Hierbei wird das Homogenitätsproblem untersucht, da ein kausaler Zusammenhang überprüft wird( Einfluss Sternzeichen auf Charaktereigenschaften)}
+Hierbei wird das Homogenitätsproblem untersucht, da ein kausaler Zusammenhang überprüft wird (Einfluss Sternzeichen auf Charaktereigenschaften)
 
 # Datenmanagement
 
@@ -141,7 +141,7 @@ summary(daten)
 ```
 
 Da das Jahr für die Ermittlung des Sternzeichens keine Relevanz hat, ist die Annahme des aktuellen Jahres (2023) von R für uns in Ordnung.
-Mit Hilfe der `Zodiac()` Funktion aus dem `DescTools` Paket wird der Datumswert in das Sternzeichen (in Form einer Zeichenkette) umgewandelt.
+Mithilfe der `Zodiac()` Funktion aus dem `DescTools` Paket wird der Datumswert in das Sternzeichen (in Form einer Zeichenkette) umgewandelt.
 
 ```{r}
 # install.packages("DescTools")
@@ -186,7 +186,7 @@ Manche der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteile
 
 # Untersuchung des Zusammenhangs Sternzeichen und Charaktereigenschaften
 
-Es handelt sich um fünf Merkmale, die pro Respondent:in erhoben wurden. `Sternzeichen` stellt ein Gruppierungsmekrmal dar, es handelt sich daher bei der Fragestellung, ob Charaktereigenschaften bei unterschiedlichen Sternzeichen gleich verteilt sind um ein *Homogenitätsproblem*.
+Es handelt sich um fünf Merkmale, die pro Respondent:in erhoben wurden. `Sternzeichen` stellt ein Gruppierungsmerkmal dar, es handelt sich daher bei der Fragestellung, ob Charaktereigenschaften bei unterschiedlichen Sternzeichen gleich verteilt sind um ein *Homogenitätsproblem*.
 
 Zunächst kombinieren wir die einzelnen Kontingenztabellen zu einer gemeinsamen Tabelle, welche die Sternzeichen und die Summe aller Charaktereigenschaften (jeweils 4 binäre kategoriale Variablen) enthält:
 
@@ -201,16 +201,16 @@ library(pander)
 pander(tab_sternzeichen_charaktereigenschaft, justify="right", emphasize.rownames=FALSE)
 ```
 
-Die relativen Anteile werden in Zeilenprozent, also normiet auf die Sternzeichen, angegeben:
+Die relativen Anteile werden in Zeilenprozent, also normiert auf die Sternzeichen, angegeben:
 
 ```{r}
 tab_sternz_rel = round(prop.table(tab_sternzeichen_charaktereigenschaft, 1), 2)
 pander(tab_sternz_rel, justify="right", emphasize.rownames=FALSE)
 ```
 
-Es ist zu erkennen, dass Charaktereigenschaften in der Stichprobe bei unterschidlichen Sternzeichen unterschiedlich häufig auftreten. So gibt es in der Stichprobe kaum Personen mit Sternzeichen Löwe und Charaktereigenschaft Introversion, jedoch viele Personen mit Sternzeichen Stier und Charaktereigenschaft Introversion.
+Es ist zu erkennen, dass Charaktereigenschaften in der Stichprobe bei unterschiedlichen Sternzeichen unterschiedlich häufig auftreten. So gibt es in der Stichprobe kaum Personen mit Sternzeichen Löwe und Charaktereigenschaft Introversion, jedoch viele Personen mit Sternzeichen Stier und Charaktereigenschaft Introversion.
 
-Die relativen Häufigkeiten werden mit Hilfe eines Spineplots visualisiert:
+Die relativen Häufigkeiten werden mithilfe eines Spineplots visualisiert:
 
 
 ```{r}
@@ -223,23 +223,15 @@ Auch der Spineplot zeigt, dass die Verteilungen der jeweiligen Charaktereigensch
 chisq.test(tab_sternzeichen_charaktereigenschaft)
 ```
 
-Aufgrund der Wanrmeldung kontrollieren wir mit simuliertem P-Werten:
+Aufgrund der Warnmeldung kontrollieren wir mit simuliertem P-Werten:
 
 ```{r}
 chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000)
 ```
 
-Der P-Wert liegt in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen. werden.
+Der P-Wert liegt in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen werden.
 
-```{r}
-# TODO: Durch 4 
-# tab_extraversion_introversion_sternzeichen = with(daten, table(extraversion_introversion, sternzeichen))
-# tab_extraversion_introversion_sternzeichen
-# library(vcd)
-# tile(tab_extraversion_introversion_sternzeichen, main="Beobachtete Werte")
-# tile(tab_extraversion_introversion_sternzeichen, type="expected", main="Erwartete Werte")
-# chisq.test(tab_extraversion_introversion_sternzeichen)
-```
+
 
 
 # Überprüfung der Fragestellung bzgl. der Grundgesamtheit (Tests, Konfidenzintervalle, Modelle etc.)

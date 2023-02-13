@@ -41,7 +41,7 @@ Zwar wird von keinen signifikanten Unterschieden vom Einfluss (oder Nicht-Einflu
 
 ## Operationalisierung
 
-Wie bereits allgemein beschrieben, werden Informationen zum Sternzeichen und zu den Charaktereigenschaften von Personen nach dem Myers-Briggs Typenindikator mit Hilfe einer geteilten Datenbank gesammelt. Im konkreten bedeutet dies, dass primär folgende Variablen mit den genannten Ausprägungsformen erfasst werden:
+Wie bereits allgemein beschrieben, werden Informationen zum Sternzeichen und zu den Charaktereigenschaften von Personen nach dem Myers-Briggs Typenindikator mithilfe einer geteilten Datenbank gesammelt. Im konkreten bedeutet dies, dass primär folgende Variablen mit den genannten Ausprägungsformen erfasst werden:
 
 * Geburtsdatum (Tag und Monat, z.B. 04.11.)
 * Charaktereigenschaften:
@@ -85,8 +85,8 @@ Um den Datensatz auch hinsichtlich möglichen Störvariablen zu untersuchen, wer
 * Kovarianzanalyse:
 Ziel ist, die Auswirkung von Kovariaten bzw. Kovariablen, d. h. von nicht interessierenden unabhängigen Variablen, auf die abhängige Variable auszublenden (Reduktion des Rauschens) und so einen möglichen Effekt einer interessierenden unabhängigen Variable auf die abhängige Variable statistisch nachweisen zu können (Erhöhung der Trennschärfe)
 
-* Mehr als zwei kategorielle Variablen:
-Wir untersuchen zunächst den Einfluss des kategorialen Merkmals Tierkzreiszeichen auf die kategoriellen Merkmale der Charaktereigenschaften. Hierbei wird jede Charaktereigenschaft sowohl einzeln als auch alle Charaktereigenschaften gesammelt analysiert.
+* Mehr als zwei kategoriale Variablen:
+Wir untersuchen zunächst den Einfluss des kategorialen Merkmals Tierkreiszeichen auf die kategorialen Merkmale der Charaktereigenschaften. Hierbei wird jede Charaktereigenschaft sowohl einzeln als auch alle Charaktereigenschaften gesammelt analysiert.
 Hierbei wird das Homogenitätsproblem untersucht, da ein kausaler Zusammenhang überprüft wird (Einfluss Sternzeichen auf Charaktereigenschaften)
 
 # Datenmanagement
@@ -229,36 +229,22 @@ Aufgrund der Warnmeldung kontrollieren wir mit simuliertem P-Werten:
 chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000)
 ```
 
-Der P-Wert liegt in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen werden.
 
+# Überprüfung der Fragestellung bzgl. der Grundgesamtheit
 
+Der P-Wert liegt mit TODO in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen werden.
 
-
-# Überprüfung der Fragestellung bzgl. der Grundgesamtheit (Tests, Konfidenzintervalle, Modelle etc.)
-
-* Bei Tests:
-  * Angabe von Testbezeichnung
-  * Begründung der Testauswahl (z.B. robuste Methoden bei Ausreißern etc.)
-  * Null- und Alternativhypothese
-  * Signifikanzniveau
-  * P-Wert
-  * Formale Schlussfolgerung (Vergleich P-Wert mit Signifikanzniveau)
-  * Inhaltliche Schlussfolgerung
-* Bei Modellen:
-  * Begründung für die Wahl des Modells (z.B. abhängig vom Skalenniveau der abhängigen und unabhängigen Variablen)
-  * Schätzung des Modells
-  * Bei Regressionsmodellen: Ableitung der Modellformel, sowie Interpretation des Einflusses der unabhängigen Variablen auf die abhängige Variable ("Effektstärke"). Unterstützung via Effektplot bzw. Modellplot
-  * Beurteilung der Signifikanz der Parameter, sowie des Gesamtmodells
-  * Beurteilung der Modellgüte (z.B. R<sup>2</sup> bei linearer Regression)
-  * Modelldiagnostik (Normalverteilung der Residuen, Restzusammenhang der Residuen mit den geschätzten Werten)
-  * Diagramm mit erwarteten Werten (z.B. Regressionsgerade) samt Konfidenzbändern
-  * Vorhersagen (erwartete Werte, bzw. Prognoseintervalle für Einzelwerte)
 
 # Fazit
 
 * Zusammenfassung
+  * Die in diesem Bericht dargelegte Fragestellung "Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?" wurde anhand fünf Merkmalen, die pro Respondent:in erhoben wurden, untersucht. Das *Homogenitätsproblem* wurde anhand der statistischen Methoden der Kovarianzanalyse und an den mehr als zwei kategorialen Variablen überprüft.
+  * Die Anzahl der jeweiligen erhobenen Sternzeichen ist in der Stichprobe nicht gleichverteilt, die Paare der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteilen/Wahrnehmen) kommen in etwa gleich häufig vor. Die Ausnahme stellen hier die Eigenschaften Extraversion/Introversion dar, diese scheinen ungleich verteilt zu sein.
+  * Nach der umfassenden Durchführung des Chi-squared-Tests nach Pearson konnte festgestellt werden, dass die Homogenitätshypothese nicht verworfen werden kann, da der P-Wert weit über dem verwendeten Signifikanzniveau von 0.05 liegt. Mit den vorliegenden Daten kann keine Signifikanz im Auftreten von Charaktereigenschaften bei Sternzeichen festgestellt werden.
 * Diskussion allfälliger Probleme
+  * TODO
 * Generalisierbarkeit der Ergebnisse
+  * TODO
 
 \newpage
 

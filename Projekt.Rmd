@@ -15,10 +15,10 @@ TODO:
 Das Ziel dieses Projektes ist es, mithilfe von quantitativen und statistischen Methoden, aufzuzeigen ob es einen Zusammenhang zwischen Charaktereigenschaften und dem Sternzeichen gibt. 
 Die Forschungsfrage lautet daher **Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?** 
 Um die Forschungsfragen zu beantworten, erhoben die drei Autor:innen Daten. Um Mehrdeutigkeiten bei der Selbsteinschätzung zu vermeiden, bewerteten die Autoren:innen Personen in der Umgebung nach Myers-Briggs-Typ-Indikatoren. Dies sind vier binäre Kategorien, die verschiedene Persönlichkeitsmerkmale einer Person klassifizieren. Zusätzlich werden auch Geburtstage (Tag und Monat) erfasst. Folgende Characktereigenschaften wurden erfasst:
-  * Extraversion / Introversion
-  * Intuition / Sensorik
-  * Denken / Fühlen
-  * Wahrnehmen / Beurteilen
+* Extraversion (0) ... Introversion (1)
+* Intuition (0) ... Sensorik (1)
+* Denken (0) ... Fühlen (1)
+* Wahrnehmen (0) ... Beurteilen (1)
 In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.
 Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf möglichen Ausprägungen:
 

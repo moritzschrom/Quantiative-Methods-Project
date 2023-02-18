@@ -50,6 +50,6 @@ tab_sternz_rel = round(prop.table(tab_sternzeichen_charaktereigenschaft, 1), 2)
 pander(tab_sternz_rel, justify="right", emphasize.rownames=FALSE)
 #Die relativen Häufigkeiten werden mithilfe eines Spineplots visualisiert:
 spineplot(tab_sternz_rel, main="Charaktereigenschaft nach Sternzeichen")
-# Chi Quadrat Test durchgeführt
+# Chi Quadrat Test durchgeführt 
 chisq.test(tab_sternzeichen_charaktereigenschaft)
 chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000)

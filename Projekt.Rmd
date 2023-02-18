@@ -12,6 +12,34 @@ knitr::opts_chunk$set(echo = TRUE)
 # Kurzfassung
 
 TODO:
+Das Ziel dieses Projektes ist es, mithilfe von quantitativen und statistischen Methoden, aufzuzeigen ob es einen Zusammenhang zwischen Charaktereigenschaften und dem Sternzeichen gibt. 
+Die Forschungsfrage lautet daher **Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?** 
+Um die Forschungsfragen zu beantworten, erhoben die drei Autor:innen Daten. Um Mehrdeutigkeiten bei der Selbsteinschätzung zu vermeiden, bewerteten die Autoren:innen Personen in der Umgebung nach Myers-Briggs-Typ-Indikatoren. Dies sind vier binäre Kategorien, die verschiedene Persönlichkeitsmerkmale einer Person klassifizieren. Zusätzlich werden auch Geburtstage (Tag und Monat) erfasst. Folgende Characktereigenschaften wurden erfasst:
+  * Extraversion / Introversion
+  * Intuition / Sensorik
+  * Denken / Fühlen
+  * Wahrnehmen / Beurteilen
+In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.
+Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf möglichen Ausprägungen:
+
+* Widder (21.03. - 20.04.)
+* Stier (21.04. - 21.05.)
+* Zwillinge (22.05. - 21.06.)
+* Krebs (22.06. - 22.07.)
+* Löwe (23.07. - 22.08.)
+* Jungfrau (23.08. - 22.09.)
+* Waage (23.09. - 22.10.)
+* Skorpion (23.10. - 22.11.)
+* Schütze (23.11. - 20.12.)
+* Steinbock (21.12. - 19.01.)
+* Wassermann (20.01. - 18.02.)
+* Fische (19.02. - 20.03.)
+Die Daten wurden in einer geteilten Datenbank gesammelt, liegen in einer exportierten CSV-Datei vor und enthält TODO Datensätze.
+Bei der Analyse der Daten  ist erkennbar, dass die Sternzeichen in der Stichprobe nicht gleich oft vorkommen. 
+TODO: So kommt das Sternzeichen ... mit einer Population von ... am häufigsten vor, das Sternzeichen ... mit einer Population von ... am seltensten (auf die Stichprobe bezogen).
+Es ist zu erkennen, dass Charaktereigenschaften in der Stichprobe bei unterschiedlichen Sternzeichen unterschiedlich häufig auftreten. TODO: So gibt es in der Stichprobe kaum Personen mit Sternzeichen Löwe und Charaktereigenschaft Introversion, jedoch viele Personen mit Sternzeichen Stier und Charaktereigenschaft Introversion
+
+TODO: Conclusion von Einleitung
 
 # Einleitung
 

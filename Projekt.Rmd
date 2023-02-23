@@ -1,7 +1,7 @@
 ---
 title: "Bericht (für Fachkolleg:innen)"
 author: "Moritz Laßnig, Moritz Schrom, Claudia Vötter"
-date: "4\\. Dezember 2022"
+date: "19\\. Februar 2023"
 output: pdf_document
 ---
 
@@ -11,14 +11,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Kurzfassung
 
-TODO:
-Das Ziel dieses Projektes ist es, mithilfe von quantitativen und statistischen Methoden, aufzuzeigen ob es einen Zusammenhang zwischen Charaktereigenschaften und dem Sternzeichen gibt. 
-Die Forschungsfrage lautet daher **Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?** 
+Das Ziel dieses Projektes ist es, mithilfe von quantitativen und statistischen Methoden aufzuzeigen, ob es einen Zusammenhang zwischen Charaktereigenschaften und dem Sternzeichen gibt.
+
+Die Forschungsfrage lautet: **Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?**
+
 Um die Forschungsfragen zu beantworten, erhoben die drei Autor:innen Daten. Um Mehrdeutigkeiten bei der Selbsteinschätzung zu vermeiden, bewerteten die Autoren:innen Personen in der Umgebung nach Myers-Briggs-Typ-Indikatoren. Dies sind vier binäre Kategorien, die verschiedene Persönlichkeitsmerkmale einer Person klassifizieren. Zusätzlich werden auch Geburtstage (Tag und Monat) erfasst. Folgende Characktereigenschaften wurden erfasst:
-* Extraversion (0) ... Introversion (1)
-* Intuition (0) ... Sensorik (1)
-* Denken (0) ... Fühlen (1)
-* Wahrnehmen (0) ... Beurteilen (1)
+
+* Extraversion / Introversion
+* Intuition / Sensorik
+* Denken / Fühlen
+* Wahrnehmen / Beurteilen
+
 In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.
 Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf möglichen Ausprägungen:
 
@@ -34,12 +37,17 @@ Es handelt sich beim Tierkreiszeichen um eine kategoriale Variable, mit zwölf m
 * Steinbock (21.12. - 19.01.)
 * Wassermann (20.01. - 18.02.)
 * Fische (19.02. - 20.03.)
-Die Daten wurden in einer geteilten Datenbank gesammelt, liegen in einer exportierten CSV-Datei vor und enthält TODO Datensätze.
-Bei der Analyse der Daten  ist erkennbar, dass die Sternzeichen in der Stichprobe nicht gleich oft vorkommen. 
-TODO: So kommt das Sternzeichen ... mit einer Population von ... am häufigsten vor, das Sternzeichen ... mit einer Population von ... am seltensten (auf die Stichprobe bezogen).
-Es ist zu erkennen, dass Charaktereigenschaften in der Stichprobe bei unterschiedlichen Sternzeichen unterschiedlich häufig auftreten. TODO: So gibt es in der Stichprobe kaum Personen mit Sternzeichen Löwe und Charaktereigenschaft Introversion, jedoch viele Personen mit Sternzeichen Stier und Charaktereigenschaft Introversion
 
-TODO: Conclusion von Einleitung
+Die Daten wurden in einer geteilten Datenbank gesammelt, liegen in einer exportierten CSV-Datei vor und enthält 100 Datensätze. Nach Verarbeiten der Daten mithilfe von R wurde eine deskriptive Analyse durchgeführt, welche folgende Erkenntnisse hervorbrachte:
+
+* Sternzeichen kommen in der Stichprobe nicht gleich oft vor.
+* Charaktereigenschaften treten in der Stichprobe bei unterschiedlichen Sternzeichen unterschiedlich häufig auf.
+
+Um die Homogenitätstheorie (Es gibt keine signifikanten Unterschiede im Auftreten der beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen) zu wiederlegen, und auf die Grundgesamtheit schließen zu können, wurde eine Kontingenztabelle erstellt, und ein $\chi^2$-Test mit Signifikanzniveau 0.05 durchgeführt.
+
+Der P-Wert lag mit 0.9013 weit über 0.05, somit konnte im Rahmen der Untersuchung die Nullhypothese nicht wiederlegt werden. Die Homogenitätsthese wird beibehalten - Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen.
+
+\newpage
 
 # Einleitung
 
@@ -78,12 +86,7 @@ Wie bereits allgemein beschrieben, werden Informationen zum Sternzeichen und zu 
   * Denken / Fühlen
   * Wahrnehmen / Beurteilen
 
-Es handelt sich bei den vier Merkmalen, welche die Charaktereigenschaften von Personen beschreiben jeweils um kategoriale Variablen mit binärer Ausprägung: Jede der vier Kategorien wird in zwei mögliche Ausprägungen unterteilt. So kann die Variable "Extraversion / Introversion" entweder den Wert "Extraversion" oder "Introversion" annehmen, jedoch nie beide oder keinen der beiden möglichen Werte. Dies kann im Folgenden auch kodiert werden:
-
-* Charaktereigenschaft1: Extraversion (0) ... Introversion (1)
-* Charaktereigenschaft2: Intuition (0) ... Sensorik (1)
-* Charaktereigenschaft3: Denken (0) ... Fühlen (1)
-* Charaktereigenschaft4: Wahrnehmen (0) ... Beurteilen (1)
+Es handelt sich bei den vier Merkmalen, welche die Charaktereigenschaften von Personen beschreiben jeweils um kategoriale Variablen mit binärer Ausprägung: Jede der vier Kategorien wird in zwei mögliche Ausprägungen unterteilt. So kann die Variable "Extraversion / Introversion" entweder den Wert "Extraversion" oder "Introversion" annehmen, jedoch nie beide oder keinen der beiden möglichen Werte.
 
 In der Datenerfassung wird ein verpflichtendes Auswahlfeld verwendet, welches den Wertebereich auf die beschriebenen binären Ausprägungen einschränkt.
 
@@ -110,16 +113,15 @@ Um den Datensatz auch hinsichtlich möglichen Störvariablen zu untersuchen, wer
 * Erfassungsdatum (Tag, Monat und Jahr, z.B. 09.01.2023)
 
 ## Statistische Methoden
-* Kovarianzanalyse:
-Ziel ist, die Auswirkung von Kovariaten bzw. Kovariablen, d. h. von nicht interessierenden unabhängigen Variablen, auf die abhängige Variable auszublenden (Reduktion des Rauschens) und so einen möglichen Effekt einer interessierenden unabhängigen Variable auf die abhängige Variable statistisch nachweisen zu können (Erhöhung der Trennschärfe)
+* Kontingenztabelle:
+Um die Homogenitätstheorie zu wiederlegen, wird eine Kontingenztabelle mit dem Auftreten der kategorialen Variablen Sternzeichen und Charaktereigenschaften erstellt. Mit Hilfe dieser Kontingenztabelle, kann das Auftreten der abhängigen Variablen (Charaktereigenschaften) pro Gruppierungsmerkmal (Sternzeichen) genauer untersucht werden.
 
-* Mehr als zwei kategoriale Variablen:
-Wir untersuchen zunächst den Einfluss des kategorialen Merkmals Tierkreiszeichen auf die kategorialen Merkmale der Charaktereigenschaften. Hierbei wird jede Charaktereigenschaft sowohl einzeln als auch alle Charaktereigenschaften gesammelt analysiert.
-Hierbei wird das Homogenitätsproblem untersucht, da ein kausaler Zusammenhang überprüft wird (Einfluss Sternzeichen auf Charaktereigenschaften)
+* $\chi^2$-Test:
+Wir untersuchen die gleichmäßige Verteilung der kategorialen Variablen, sowie die Signifikanz dieser auf dem 0.05-Niveau. Hierbei wird das Homogenitätsproblem untersucht, da ein Gruppierungsmkermal vorliegt (Auftreten von Charaktereigenschaften je Sternzeichen - das Sternzeichen ist in diesem Falle das Gruppierungsmerkmal).
 
 # Datenmanagement
 
-Zur Untersuchung gelangt eine Stichprobe mit TODO Beobachtungen und fünf Merkmalen:
+Zur Untersuchung gelangt eine Stichprobe mit 100 Beobachtungen und fünf Merkmalen:
 
 * Geburtsdatum, Tag und Monat im Format TT.MM. (*geburtstag*)
 * Charaktereigenschaft 1, binäre kategoriale Variable mit den Ausprägungen: Extraversion / Introversion (*extraversion_introversion*)
@@ -188,8 +190,7 @@ barplot(table(sternzeichen), las=2)
 abline(h=mean(length(sternzeichen)/12), col="red")
 ```
 
-Es ist erkennbar, dass die Sternzeichen in der Stichprobe nicht gleich oft vorkommen. 
-#TODO: So kommt das Sternzeichen ... mit einer Population von ... am häufigsten vor, das Sternzeichen ... mit einer Population von ... am seltensten (auf die Stichprobe bezogen).
+Es ist erkennbar, dass die Sternzeichen in der Stichprobe nicht gleich oft vorkommen. So kommt das Sternzeichen Löwe mit einer Population von 11 am häufigsten vor, die Sternzeichen Jungfrau und Widder mit einer Population von jeweils 6 am seltensten (auf die Stichprobe bezogen).
 
 Die Verteilung der vier erfassten Charaktereigenschaften werden auch als Barplots visualisiert:
 
@@ -210,13 +211,13 @@ barplot(table(c4))
 abline(h=mean(length(c4)/2), col="red")
 ```
 
-Manche der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteilen/Wahrnehmen) kommen in der Stichprobe in etwa gleich häufig vor. Einzig die Charaktereigenschaft Extraversion/Introversion scheint etwas ungleich verteilt.
+Manche der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteilen/Wahrnehmen) kommen in der Stichprobe in etwa gleich häufig vor. Einzig die Charaktereigenschaft Extraversion/Introversion scheint etwas ungleich verteilt. In der Stichprobe gibt es mehr Personen mit Charakterausprägung Extraversion als Introversion, Sensorik als Intuition, Denken als Fühlen und Beurteilen als Wahrnehmen.
 
 # Untersuchung des Zusammenhangs Sternzeichen und Charaktereigenschaften
 
 Es handelt sich um fünf Merkmale, die pro Respondent:in erhoben wurden. `Sternzeichen` stellt ein Gruppierungsmerkmal dar, es handelt sich daher bei der Fragestellung, ob Charaktereigenschaften bei unterschiedlichen Sternzeichen gleich verteilt sind um ein *Homogenitätsproblem*.
 
-Zunächst kombinieren wir die einzelnen Kontingenztabellen zu einer gemeinsamen Tabelle, welche die Sternzeichen und die Summe aller Charaktereigenschaften (jeweils 4 binäre kategoriale Variablen) enthält:
+Zunächst kombinieren wir die einzelnen Kontingenztabellen mit Hilfe von `cbind()` zu einer gemeinsamen Tabelle, welche die Sternzeichen und die Summe aller Charaktereigenschaften (jeweils 4 binäre kategoriale Variablen) enthält:
 
 ```{r}
 t1 = with(daten, table(sternzeichen, extraversion_introversion))
@@ -242,7 +243,7 @@ Die relativen Häufigkeiten werden mithilfe eines Spineplots visualisiert:
 
 
 ```{r}
-spineplot(tab_sternz_rel, main="Charaktereigenschaft nach Sternzeichen")
+spineplot(tab_sternz_rel, main="Charaktereigenschaft nach Sternzeichen", las=2)
 ```
 
 Auch der Spineplot zeigt, dass die Verteilungen der jeweiligen Charaktereigenschaften bei unterschiedlichen Sternzeichen etwas abweichen. Es gilt nun zu überprüfen, ob diese in der Stichprobe beobachteten Unterschiede auch auf die Grundgesamtheit zutreffen. Dazu wird ein $\chi^2$-Test mit Signifikanzniveau 0.05 durchgeführt (Nullhypothese: Verteilung der Charaktereigenschaften homogen in den Sternzeichen; Alternative: nicht homogen):
@@ -260,19 +261,84 @@ chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000
 
 # Überprüfung der Fragestellung bzgl. der Grundgesamtheit
 
-Der P-Wert liegt mit TODO in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen werden.
-
+Der P-Wert liegt mit 0.9013 in beiden Fällen weit über dem Signifikanzniveau von 0.05, die Homogenitätshypothese wird also beibehalten. Die vorliegende Stichprobe spricht gegen signifikanten Unterschiede in den beobachteten Charaktereigenschaften zwischen vergleichbaren Gruppen von Menschen mit demselben Sternzeichen. Es konnten kein signifikant höheres oder niederes Auftreten bestimmter Charaktereigenschaften bei unterschiedlichen Sternzeichen nachgewiesen werden.
 
 # Fazit
 
-* Zusammenfassung
-  * Die in diesem Bericht dargelegte Fragestellung "Gibt es einen Zusammenhang zwischen dem Sternzeichen einer Person und ihren Charaktereigenschaften?" wurde anhand fünf Merkmalen, die pro Respondent:in erhoben wurden, untersucht. Das *Homogenitätsproblem* wurde anhand der statistischen Methoden der Kovarianzanalyse und an den mehr als zwei kategorialen Variablen überprüft.
-  * Die Anzahl der jeweiligen erhobenen Sternzeichen ist in der Stichprobe nicht gleichverteilt, die Paare der Charaktereigenschaften (Intuition/Sensorik, Denken/Fühlen, Beurteilen/Wahrnehmen) kommen in etwa gleich häufig vor. Die Ausnahme stellen hier die Eigenschaften Extraversion/Introversion dar, diese scheinen ungleich verteilt zu sein.
-  * Nach der umfassenden Durchführung des Chi-squared-Tests nach Pearson konnte festgestellt werden, dass die Homogenitätshypothese nicht verworfen werden kann, da der P-Wert weit über dem verwendeten Signifikanzniveau von 0.05 liegt. Mit den vorliegenden Daten kann keine Signifikanz im Auftreten von Charaktereigenschaften bei Sternzeichen festgestellt werden.
-* Diskussion allfälliger Probleme
-  * TODO
-* Generalisierbarkeit der Ergebnisse
-  * TODO
+Zusammenfassend kann gesagt werden, dass nach der Auswertung unseres Datensatzes nichts gegen ein gleichmäßiges Auftreten der Charaktereigenschaften je Sternzeichen spricht. Wir müssen daher weiterhin davon ausgehen, dass Charaktereigesnchaften und Sternzeichen unabhängig sind, und ebendiese Eigenschaften pro Sternzeichen gleich oft auftreten. Diese Aussage bezieht sich auch auf unsere Grundpopulation.
+
+Jedoch ist der Umfang dieser Grundpopulation durch die Art und Weise unserer Datenerhebung eingeschränkt. Die Daten wurden von den drei Autor:innen im jeweiligen sozialen Umkreis erhoben. Dieser ist aufgrund von soziodemografischen Merkmalen (Alter, Tätigkeit, Ausbildungsstand, Kultur, ...) nicht für z.B. die Grundpopulation der österreichischen Bevölkerung oder gar für die der Weltbevölkerung repräsentativ. 
+
+Des Weiteren wurden insgesamt 100 Respondent:innen erhoben, was das Schließen auf eine größere Grundpopulation problematisch machen würde. Bei der Datenerhebung wurde außerdem nicht aktiv darauf geachtet gleich viele Respondent:innen pro Gruppierungsmerkmal (Sternzeichen) zu erheben. Bedingt durch die Rahmenbedingungen der Lehrveranstaltung war es den Autor:innen nicht möglich eine höhere Datenmenge zu sammeln.
+
+Unter Berücksichtigungen dieser allfälligen Probleme, kann jedoch durchaus auf die beschriebene Grundpopulation geschlossen werden: Unsere Daten sprechen gegen einen Zusammenhang.
 
 \newpage
 
+# Anhang
+
+```{r}
+# Daten einlesen und kontrollieren
+daten = read.table("daten.csv", header = TRUE, sep=",")
+head(daten)
+any(is.na(daten))
+summary(daten)
+
+# Datentypen anpassen
+daten$extraversion_introversion<-as.factor(daten$extraversion_introversion)
+daten$intuition_sensorik<-as.factor(daten$intuition_sensorik)
+daten$denken_fuehlen<-as.factor(daten$denken_fuehlen)
+daten$wahrnehmen_beurteilen<-as.factor(daten$wahrnehmen_beurteilen)
+summary(daten)
+
+# Nicht benötigte Daten entfernen und Datum formatieren
+daten<-daten[,-c(7,8)]
+summary(daten)
+daten$geburtstag<-as.Date(daten$geburtstag, format='%d.%m.')
+summary(daten)
+
+# Sternzeichen berechnen
+# install.packages("DescTools")
+library(DescTools)
+daten$sternzeichen<-Zodiac(daten$geburtstag, lang="deu")
+summary(daten)
+sternzeichen<-daten$sternzeichen
+
+# Deskriptive Analyse der Stichprobe
+barplot(table(sternzeichen), las=2)
+abline(h=mean(length(sternzeichen)/12), col="red")
+c1<-daten$extraversion_introversion
+c2<-daten$intuition_sensorik
+c3<-daten$denken_fuehlen
+c4<-daten$wahrnehmen_beurteilen
+par(mfrow=c(2,2))
+barplot(table(c1))
+abline(h=mean(length(c1)/2), col="red")
+barplot(table(c2))
+abline(h=mean(length(c2)/2), col="red")
+barplot(table(c3))
+abline(h=mean(length(c3)/2), col="red")
+barplot(table(c4))
+abline(h=mean(length(c4)/2), col="red")
+
+# Kombinieren der einzelnen Kontingenztabellen zu einer gemeinsamen Tabelle
+t1 = with(daten, table(sternzeichen, extraversion_introversion))
+t2 = with(daten, table(sternzeichen, intuition_sensorik))
+t3 = with(daten, table(sternzeichen, denken_fuehlen))
+t4 = with(daten, table(sternzeichen, wahrnehmen_beurteilen))
+
+tab_sternzeichen_charaktereigenschaft = cbind(t1, t2, t3, t4)
+library(pander)
+pander(tab_sternzeichen_charaktereigenschaft, justify="right", emphasize.rownames=FALSE)
+
+# Die relativen Anteile werden in Zeilenprozent, also normiert auf die Sternzeichen, angegeben
+tab_sternz_rel = round(prop.table(tab_sternzeichen_charaktereigenschaft, 1), 2)
+pander(tab_sternz_rel, justify="right", emphasize.rownames=FALSE)
+
+# Die relativen Häufigkeiten werden mithilfe eines Spineplots visualisiert
+spineplot(tab_sternz_rel, main="Charaktereigenschaft nach Sternzeichen")
+
+# Chi Quadrat Test wird durchgeführt
+chisq.test(tab_sternzeichen_charaktereigenschaft)
+chisq.test(tab_sternzeichen_charaktereigenschaft, simulate.p.value=TRUE, B=10000)
+```
